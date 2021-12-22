@@ -18,7 +18,7 @@ let searchParams = new URLSearchParams(paramsString);
 let id = Number(searchParams.get("http://localhost:3000/edit.html?id"));
 
 function getUserAPI() {
-  fetch(`/users/${id}`)
+  fetch("/users/" + id)
     .then((res) => res.json())
     .then((user) => takeDataUser(user))
     .catch((error) => console.error("Error:", error));
