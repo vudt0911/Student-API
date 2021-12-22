@@ -18,9 +18,9 @@ let searchParams = new URLSearchParams(paramsString);
 const id = Number(searchParams.get("http://localhost:3000/edit.html?id"));
 
 function getUserAPI() {
-  fetch("/users")
+  fetch(`/users/${id}`)
     .then((res) => res.json())
-    .then((data) => takeDataUser(data))
+    .then((user) => takeDataUser(user))
     .catch((error) => console.error("Error:", error));
 }
 
@@ -36,8 +36,7 @@ function editUserAPI(data, id) {
     .catch((error) => console.error("Error:", error));
 }
 
-function takeDataUser(users) {
-  let user = users.find((user) => user.id === id);
+function takeDataUser(user) {
   nameEle.value = user.name;
   birthdayEle.value = user.birthday;
   emailEle.value = user.email;
@@ -133,4 +132,4 @@ saveEle.addEventListener("click", () => {
 
 window.onload = () => {
   getUserAPI();
-};
+}
