@@ -13,9 +13,12 @@ const backBtn = $(".btn-secondary");
 
 // import * as checkValidate from './create.js';
 
-const paramsString = window.location.href;
-let searchParams = new URLSearchParams(paramsString);
-let id = Number(searchParams.get("http://localhost:3000/edit.html?id"));
+// const paramsString = window.location.href;
+// let searchParams = new URLSearchParams(paramsString);
+// let id = Number(searchParams.get("http://localhost:3000/edit.html?id"));
+
+const url = new URL(window.location.href);
+let id = url.searchParams.get("id");
 
 function getUserAPI() {
   fetch("/users/" + id)
@@ -132,4 +135,4 @@ saveEle.addEventListener("click", () => {
 
 window.onload = () => {
   getUserAPI();
-}
+};
