@@ -15,7 +15,7 @@ const backBtn = $(".btn-secondary");
 
 const paramsString = window.location.href;
 let searchParams = new URLSearchParams(paramsString);
-const id = Number(searchParams.get("http://localhost:3000/edit.html?id"));
+let id = Number(searchParams.get("http://localhost:3000/edit.html?id"));
 
 function getUserAPI() {
   fetch(`/users/${id}`)
