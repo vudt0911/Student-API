@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "name": "Nguyễn Tuấn ANh",
+      "birthday": "09/02/1995",
+      "email": "tuananh@gmail.com",
+      "phone": "0965234185",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Bích Ngọc",
+      "email": "bichngoc@gmail.vn",
+      "phone": "0344987653",
+      "birthday": "12/05/2002"
+    },
+    {
+      "id": 3,
+      "name": "Trần Minh Anh",
+      "email": "minhanh@gmail.com",
+      "phone": "0987654321",
+      "birthday": "24/06/1999"
+    },
+    {
+      "name": "Đinh Thế Vũ",
+      "email": "thevu091193@gmail.com",
+      "phone": "0836989111",
+      "birthday": "09/11/1993",
+      "id": 4
+    }
+  ]
+}
